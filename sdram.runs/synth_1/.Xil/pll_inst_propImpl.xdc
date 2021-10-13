@@ -1,5 +1,0 @@
-set_property SRC_FILE_INFO {cfile:C:/VIVADO_PROJECTS/sdram/sdram.srcs/constrs_1/new/constraints.xdc rfile:../../../sdram.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN B14 [get_ports A[0]]
-set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN N11 [get_ports {clk}]
