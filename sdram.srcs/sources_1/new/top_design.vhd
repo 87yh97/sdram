@@ -136,7 +136,8 @@ begin
             
                 when Reset_st => 
                     
-                    reset_state(clk, write, read, reset, 
+                    reset_state(--clk, 
+                                write, read, reset, 
                                 addr, word_size, ready, data, 
                                 RESET_out, A, BA, ODT, CKE, 
                                 CS_inv, RAS_inv, CAS_inv, WE_inv, 

@@ -11,7 +11,7 @@ use UNISIM.VComponents.all;
 package reset_st is
     procedure reset_state(
         --Looking-into-chip ports
-        signal clk : IN std_logic;
+        --signal clk : IN std_logic;
         signal write : IN std_logic;
         signal read : IN std_logic;
         signal reset: IN std_logic;
@@ -56,7 +56,7 @@ package body reset_st is
 
     procedure reset_state (
         --Looking-into-chip ports
-        signal clk : IN std_logic;
+        --signal clk : IN std_logic;
         signal write : IN std_logic;
         signal read : IN std_logic;
         signal reset: IN std_logic;
