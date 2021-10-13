@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Wed Oct 13 19:35:33 2021
+| Date         : Wed Oct 13 22:20:49 2021
 | Host         : home running 64-bit major release  (build 9200)
 | Command      : report_utilization -file pll_inst_utilization_synth.rpt -pb pll_inst_utilization_synth.pb
 | Design       : pll_inst
