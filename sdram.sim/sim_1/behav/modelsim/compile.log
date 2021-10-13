@@ -1,0 +1,27 @@
+# do {reset_st_compile.do}
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Copying C:/intelFPGA/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:20:02 on Oct 13,2021
+# vcom -93 -work xil_defaultlib ../../../../sdram.srcs/sources_1/new/reset_st.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.commands.
+# ** Error (suppressible): ../../../../sdram.srcs/sources_1/new/reset_st.vhd(5): (vcom-1195) Cannot find expanded name "work.COMMANDS".
+# ** Error: ../../../../sdram.srcs/sources_1/new/reset_st.vhd(5): Unknown expanded name.
+# ** Error: ../../../../sdram.srcs/sources_1/new/reset_st.vhd(7): (vcom-1598) Library "unisim" not found.
+# ** Error: ../../../../sdram.srcs/sources_1/new/reset_st.vhd(8): (vcom-1136) Unknown identifier "UNISIM".
+# ** Error: ../../../../sdram.srcs/sources_1/new/reset_st.vhd(11): VHDL Compiler exiting
+# End time: 01:20:03 on Oct 13,2021, Elapsed time: 0:00:01
+# Errors: 6, Warnings: 0
+# ** Error: C:/intelFPGA/19.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./reset_st_compile.do line 18
+# C:/intelFPGA/19.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom  -93 -work xil_defaultlib  \
+# "../../../../sdram.srcs/sources_1/new/reset_st.vhd" \
+# "
