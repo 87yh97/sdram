@@ -4,6 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use WORK.COMMANDS.ALL;
 use WORK.reset_st.ALL;
+use WORK.refresh_st.ALL;
 
 library UNISIM;
 use UNISIM.VComponents.all;
@@ -94,43 +95,13 @@ begin
                             end if;
                             
                             State <= Idle_st;
-                            --state_counter <= to_unsigned(0, 17); --Is this reset needed?
+                            --state_counter <= to_unsigned(0, 17); --Is this reset needed? Or just not incrementing it while in Idle_st
                         end if;
                 
                     end if;
                 end if;
             end if;
             
---            if State = Reset_st then
---                if (state_counter = 0) then
---                        RESET_out <= '0';
---                        CKE <= '0';
---                        ODT <= '0';
---                end if;
---                if (state_counter = 25000) then
---                    RESET_out <= '1';
---                end if;
-                
---                if (state_counter = 80000) then
---                    CKE <= '1';
---                    A(13 downto 0) <= (others => '1');
---                    command(NOP, CS_inv, RAS_inv, CAS_inv, WE_inv, BA, A);
---                end if;
-                
---                if (state_counter = 80020) then
---                    command(MRS, CS_inv, RAS_inv, CAS_inv, WE_inv, BA, A);
---                    BA <= "010"; --MR2 register
---                    A(13 downto 11) <= (others => '0'); --RFU, always 0
---                    A(10 downto 9) <= "00"; --ODT, including dynamic ODT is disabled due to DLL_DISABLE operation mode
---                    A(8) <= '0'; --RFU, always 0
---                    A(7) <= '0'; --SRT is normal, operating temperature is not expected to exceed 85C
---                    A(6) <= '0'; --ASR is disabled, operating temperature is not expected to exceed 85C
---                    A(5 downto 3) <= "001";
---                    A(2 downto 0) <= (others => '0'); --RFU, always 0
---                end if;
-                
---                state_counter <= state_counter + 1;
---            end if;
             
             case State is
             
@@ -149,6 +120,16 @@ begin
                     state_counter <= state_counter + 1;
                     
                 when Refresh_st =>
+                
+--                    refresh_state(--clk, 
+--                                write, read, reset, 
+--                                addr, word_size, ready, data, 
+--                                RESET_out, A, BA, ODT, CKE, 
+--                                CS_inv, RAS_inv, CAS_inv, WE_inv, 
+--                                UDQS, UDQS_inv, LDQS, LDQS_inv, 
+--                                UDM, LDM, DQ, --reset_is_ongoing, 
+--                                ready_internal, state_counter);
+                                
                 when Self_Refresh_st =>
                 when Read_st =>
                 when Write_st =>
@@ -157,7 +138,7 @@ begin
             end case;
         
         
-        end if; ---------------------------------------------
+        end if; 
     
     
     end process;
